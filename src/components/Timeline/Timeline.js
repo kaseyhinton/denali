@@ -102,7 +102,7 @@ class Timeline extends Component {
                         Back
                       </Button>
                       <Button
-                        variant="contained"
+                        variant="outlined"
                         color="primary"
                         onClick={this.handleNext}
                         className={classes.button}
