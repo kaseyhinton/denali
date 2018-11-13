@@ -7,20 +7,28 @@
 
 .App-logo {
   /* animation: App-logo-spin infinite 20s linear; */
-  width: 100%;
+  height: 100vh;
+  margin-bottom: 32px;
 }
 
 .App-header {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   font-size: 22px;
+  background-image: url("./assets/denali4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 32px auto;
 }
 
 .App-link {
@@ -28,14 +36,7 @@ section {
 }
 
 .Button {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-
-h3 {
-  text-align: center;
-  color: #a38a4b;
+  position: absolute;
 }
 
 p {

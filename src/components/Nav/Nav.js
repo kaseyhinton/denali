@@ -27,7 +27,7 @@ class Nav extends Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="fixed" color="secondary">
           <Toolbar>
             <IconButton
               className={classes.menuButton}
