@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Button from "@material-ui/core/Button";
 import Timeline from "./components/Timeline/Timeline";
 import Typography from "@material-ui/core/Typography";
+import { animateScroll as scroll } from "react-scroll";
 
 class App extends Component {
   constructor(props) {
@@ -26,10 +27,7 @@ class App extends Component {
           <Button
             onClick={() => {
               setTimeout(() => {
-                window.scroll({
-                  top: this.aboutRef.current.offsetTop - 64,
-                  behavior: "smooth"
-                });
+                scroll.scrollTo(this.aboutRef.current.offsetTop - 64);
               }, 300);
             }}
             variant="outlined"
