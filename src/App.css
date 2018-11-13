@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  color:#424242;
+  color: #424242;
   font-size: 18px;
   background-color: #fff;
 }
@@ -27,12 +27,20 @@ section {
   color: #a38a4b;
 }
 
+.Button {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
 h3 {
   text-align: center;
   color: #a38a4b;
 }
 
 p {
+  display: flex;
+  flex-direction: column;
   margin: 16px auto;
   width: 100%;
   max-width: 90%;

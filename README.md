@@ -1,6 +1,7 @@
 Denali National Park and Preserve Field Trip Guide and Geology
 
 ## Pages
+
 Field Trip Guide
 Geologic Timeline
 Bibliography
@@ -16,5 +17,3 @@ Bibliography
 create-react-app
 react
 material-ui
-
-
