@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import denali1 from './assets/denali1.jpg';
 import './App.css';
+import Nav from './components/Nav/Nav';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+      <Nav />
         <header className="App-header">
           <img src={denali1} className="App-logo" alt="logo" />
           <h3>Denali National Park and Preserve</h3>
