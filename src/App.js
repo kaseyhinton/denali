@@ -21,10 +21,12 @@ class App extends Component {
           </Typography>
           <Button
             onClick={() => {
-              window.scroll({
-                top: this.aboutRef.current.offsetTop - 64,
-                behavior: "smooth"
-              });
+              setTimeout(() => {
+                window.scroll({
+                  top: this.aboutRef.current.offsetTop - 64,
+                  behavior: "smooth"
+                });
+              }, 300);
             }}
             variant="outlined"
             style={{
