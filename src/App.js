@@ -16,7 +16,11 @@ class App extends Component {
       <div className="App">
         <Nav />
         <header className="App-header">
-          <Typography variant="h3" align="center" style={{ color: "#fff" }}>
+          <Typography
+            variant="h3"
+            align="center"
+            style={{ color: "#fff", marginBottom: 32 }}
+          >
             Denali National Park
           </Typography>
           <Button
@@ -44,11 +48,7 @@ class App extends Component {
           <Typography variant="h4" align="center" gutterBottom>
             About Denali
           </Typography>
-          <Typography
-            align="justify"
-            gutterBottom
-            style={{ marginLeft: "auto", marginRight: "auto" }}
-          >
+          <Typography align="justify" gutterBottom>
             Denali National Park and Preserve Field Trip Outline The first stop
             on this field trip is at mile 3.4 on the main road into Denali. Here
             we will find a glacial erratic. These rocks are foreign to Denali
