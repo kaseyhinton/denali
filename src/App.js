@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import Button from "@material-ui/core/Button";
 import Timeline from "./components/Timeline/Timeline";
+import FieldTrip from "./components/FieldTrip/FieldTrip";
 import Typography from "@material-ui/core/Typography";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -58,6 +59,9 @@ class App extends Component {
         </section>
         <section>
           <Timeline />
+        </section>
+        <section>
+          <FieldTrip />
         </section>
       </div>
     );
