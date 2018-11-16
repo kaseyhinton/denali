@@ -1,2 +1,4 @@
 .FieldTrip {
+  display: flex;
+  flex-direction: column;
 }
