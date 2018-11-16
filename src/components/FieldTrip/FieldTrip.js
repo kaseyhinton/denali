@@ -2,16 +2,7 @@ import React, { Component } from "react";
 import "./FieldTrip.css";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";

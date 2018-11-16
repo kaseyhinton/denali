@@ -9,14 +9,7 @@ import StepContent from "@material-ui/core/StepContent";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { Element, scroller } from "react-scroll";
 
 const styles = theme => ({
   root: { marginTop: 32, marginBottom: 32 },
