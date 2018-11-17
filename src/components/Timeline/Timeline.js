@@ -9,7 +9,6 @@ import StepContent from "@material-ui/core/StepContent";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import { Element, scroller } from "react-scroll";
 
 const styles = theme => ({
   root: { marginTop: 32, marginBottom: 32 },
@@ -60,30 +59,17 @@ class Timeline extends Component {
     this.setState(state => ({
       activeStep: state.activeStep + 1
     }));
-    scroller.scrollTo("stepContent", {
-      delay: 100,
-      smooth: true,
-      offset: -48
-    });
   };
 
   handleBack = () => {
     this.setState(state => ({
       activeStep: state.activeStep - 1
     }));
-    scroller.scrollTo("stepContent", {
-      smooth: true,
-      offset: -48
-    });
-  };
+  }; 
 
   handleReset = () => {
     this.setState({
       activeStep: 0
-    });
-    scroller.scrollTo("stepContent", {
-      smooth: true,
-      offset: -48
     });
   };
 
@@ -101,13 +87,14 @@ class Timeline extends Component {
           {steps.map((label, index) => {
             return (
               <Step key={label}>
-                <StepLabel>{label}</StepLabel>
+                <StepLabel>
+                {label}
+                </StepLabel>
                 <StepContent>
                   <Typography align="justify" gutterBottom>
                     {getStepContent(index)}
                   </Typography>
                   <div className={classes.actionsContainer}>
-                    <Element name="stepContent" />
                     <div>
                       <Button
                         disabled={activeStep === 0}
