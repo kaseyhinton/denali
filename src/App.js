@@ -151,6 +151,11 @@ class App extends Component {
             Download Annotated Bibliography
           </a>
         </section>
+        <section style={{ marginBottom: 8 }}>
+          <Typography align="center" gutterBottom>
+            &copy; Kasey Hinton {new Date().getFullYear()}
+          </Typography>
+        </section>
       </div>
     );
   }
