@@ -36,7 +36,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `Lorem Ipsum.`;
+      return `The Pacific Plate and North American Plate begin colliding. Accretions from the Pacific Plate are sutured onto the North American Plate.`;
     case 1:
       return "Pieces of crust are carried northward by faulting on the Pacific and North American plate boundary. These terranes began adding crustal area to the North American Plate. The faulting and folding that occur here set the tectonic settings for the formation of Denali. The thickening of the crust happening here is responsible for the high elevation of the entire Alaska Range.";
     case 2:
