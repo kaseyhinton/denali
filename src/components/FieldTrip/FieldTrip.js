@@ -100,11 +100,6 @@ class FieldTrip extends Component {
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary" href={stop.link}>
-                Learn More
-              </Button>
-            </CardActions>
           </Card>
         ))}
       </div>

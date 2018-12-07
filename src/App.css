@@ -42,6 +42,11 @@ section {
 
 .App-link {
   color: #a38a4b;
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline;
 }
 
 .Button {
