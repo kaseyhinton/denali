@@ -6,18 +6,51 @@ import Timeline from "./components/Timeline/Timeline";
 import FieldTrip from "./components/FieldTrip/FieldTrip";
 import Typography from "@material-ui/core/Typography";
 import { animateScroll as scroll } from "react-scroll";
-import denaliAnnotatedBibliography from './assets/DenaliAnnotatedBibliography.docx';
+import denaliAnnotatedBibliography from "./assets/DenaliAnnotatedBibliography.docx";
+
+const OFFSET_TOP = 72;
+const SCROLL_DELAY = 300;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.aboutRef = React.createRef();
+    this.geologicTimelineRef = React.createRef();
+    this.fieldTripGuideRef = React.createRef();
+    this.bibliographyRef = React.createRef();
+  }
+
+  scrollToRef(ref) {
+    setTimeout(() => {
+      scroll.scrollTo(ref.current.offsetTop - OFFSET_TOP);
+    }, SCROLL_DELAY);
+  }
+
+  scrollToAbout() {
+    this.scrollToRef(this.aboutRef);
+  }
+
+  scrollToGeologicTimeline() {
+    this.scrollToRef(this.geologicTimelineRef);
+  }
+
+  scrollToFieldTripGuide() {
+    this.scrollToRef(this.fieldTripGuideRef);
+  }
+
+  scrollToBibliography() {
+    this.scrollToRef(this.bibliographyRef);
   }
 
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Nav
+          scrollToAbout={this.scrollToAbout.bind(this)}
+          scrollToGeologicTimeline={this.scrollToGeologicTimeline.bind(this)}
+          scrollToFieldTripGuide={this.scrollToFieldTripGuide.bind(this)}
+          scrollToBibliography={this.scrollToBibliography.bind(this)}
+        />
         <header className="App-header">
           <Typography
             variant="h3"
@@ -27,11 +60,7 @@ class App extends Component {
             Denali National Park
           </Typography>
           <Button
-            onClick={() => {
-              setTimeout(() => {
-                scroll.scrollTo(this.aboutRef.current.offsetTop - 64);
-              }, 300);
-            }}
+            onClick={this.scrollToAbout.bind(this)}
             variant="outlined"
             style={{
               maxWidth: 200,
@@ -102,13 +131,13 @@ class App extends Component {
             left was the resistant granite that is Denali as we know it today.
           </Typography>
         </section>
-        <section>
+        <section ref={this.geologicTimelineRef}>
           <Timeline />
         </section>
-        <section>
+        <section ref={this.fieldTripGuideRef}>
           <FieldTrip />
         </section>
-        <section>
+        <section ref={this.bibliographyRef}>
           <Typography variant="h4" align="center" gutterBottom>
             Bibliography
           </Typography>
