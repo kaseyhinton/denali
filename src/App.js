@@ -6,6 +6,7 @@ import Timeline from "./components/Timeline/Timeline";
 import FieldTrip from "./components/FieldTrip/FieldTrip";
 import Typography from "@material-ui/core/Typography";
 import { animateScroll as scroll } from "react-scroll";
+import denaliAnnotatedBibliography from './assets/DenaliAnnotatedBibliography.docx';
 
 class App extends Component {
   constructor(props) {
@@ -106,6 +107,20 @@ class App extends Component {
         </section>
         <section>
           <FieldTrip />
+        </section>
+        <section>
+          <Typography variant="h4" align="center" gutterBottom>
+            Bibliography
+          </Typography>
+          <a
+            className="App-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={denaliAnnotatedBibliography}
+            download="Denali Annotated Bibliography"
+          >
+            Download Annotated Bibliography
+          </a>
         </section>
       </div>
     );

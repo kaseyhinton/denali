@@ -43,6 +43,7 @@ section {
 .App-link {
   color: #a38a4b;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .App-link:hover {
