@@ -7,12 +7,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const styles = {
   root: {
@@ -36,10 +34,10 @@ class Nav extends Component {
   }
 
   toggleDrawer() {
-   this.setState({
-     open: !this.state.open
-   });
-  };
+    this.setState({
+      open: !this.state.open
+    });
+  }
 
   render() {
     const { classes } = this.props;
@@ -47,25 +45,45 @@ class Nav extends Component {
     const sideList = (
       <div className={classes.list}>
         <List>
-            <ListItem button>
-              <ListItemIcon><InboxIcon /></ListItemIcon>
-              <ListItemText primary="About" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon><InboxIcon /></ListItemIcon>
-              <ListItemText primary="Geologic Timeline" />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon><InboxIcon /></ListItemIcon>
-              <ListItemText primary="Field Trip Guide" />
-            </ListItem>
+          <ListItem
+            button
+            onClick={() => {
+              this.props.scrollToAbout();
+            }}
+          >
+            <ListItemText primary="About" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => {
+              this.props.scrollToGeologicTimeline();
+            }}
+          >
+            <ListItemText primary="Geologic Timeline" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => {
+              this.props.scrollToFieldTripGuide();
+            }}
+          >
+            <ListItemText primary="Field Trip Guide" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => {
+              this.props.scrollToBibliography();
+            }}
+          >
+            <ListItemText primary="Bibliography" />
+          </ListItem>
         </List>
       </div>
     );
 
     return (
       <div className={classes.root}>
-      <SwipeableDrawer
+        <SwipeableDrawer
           open={this.state.open}
           onClose={() => this.toggleDrawer()}
           onOpen={() => this.toggleDrawer()}
@@ -89,7 +107,12 @@ class Nav extends Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
+            <Typography
+              variant="h6"
+              color="inherit"
+              className={classes.grow}
+              style={{ position: "relative", left: -20 }}
+            >
               Denali
             </Typography>
             <div>
