@@ -1,16 +1,14 @@
-Denali National Park and Preserve Field Trip Guide and Geology
+# Denali National Park
+## Field Trip Guide and Geology
 
-## Pages
+For Geology 1050 at Southern Utah University. A live demo is hosted at www.denaligeology.com.
 
-Field Trip Guide
-Geologic Timeline
-Bibliography
+## Development
 
-### `npm start`
+#### `npm install`
 
-### `npm test`
+#### `npm start`
 
-### `npm run build`
 
 ## Built With
 
