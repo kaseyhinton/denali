@@ -65,7 +65,7 @@ class Timeline extends Component {
     this.setState(state => ({
       activeStep: state.activeStep - 1
     }));
-  }; 
+  };
 
   handleReset = () => {
     this.setState({
@@ -83,13 +83,20 @@ class Timeline extends Component {
         <Typography variant="h4" align="center" gutterBottom>
           Geologic Timeline
         </Typography>
-        <Stepper activeStep={activeStep} orientation="vertical">
+        <Stepper
+          activeStep={activeStep}
+          orientation="vertical"
+          style={{
+            maxWidth: 450,
+            margin: "0 auto",
+            paddingLeft: 0,
+            paddingRight: 0
+          }}
+        >
           {steps.map((label, index) => {
             return (
               <Step key={label}>
-                <StepLabel>
-                {label}
-                </StepLabel>
+                <StepLabel>{label}</StepLabel>
                 <StepContent>
                   <Typography align="justify" gutterBottom>
                     {getStepContent(index)}
