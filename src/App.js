@@ -6,7 +6,6 @@ import Timeline from "./components/Timeline/Timeline";
 import FieldTrip from "./components/FieldTrip/FieldTrip";
 import Typography from "@material-ui/core/Typography";
 import { animateScroll as scroll } from "react-scroll";
-import denaliAnnotatedBibliography from "./assets/DenaliAnnotatedBibliography.docx";
 
 const OFFSET_TOP = 72;
 const SCROLL_DELAY = 300;
@@ -17,7 +16,7 @@ class App extends Component {
     this.aboutRef = React.createRef();
     this.geologicTimelineRef = React.createRef();
     this.fieldTripGuideRef = React.createRef();
-    this.bibliographyRef = React.createRef();
+    this.resourcesRef = React.createRef();
   }
 
   scrollToRef(ref) {
@@ -38,8 +37,8 @@ class App extends Component {
     this.scrollToRef(this.fieldTripGuideRef);
   }
 
-  scrollToBibliography() {
-    this.scrollToRef(this.bibliographyRef);
+  scrollToResources() {
+    this.scrollToRef(this.resourcesRef);
   }
 
   render() {
@@ -49,7 +48,7 @@ class App extends Component {
           scrollToAbout={this.scrollToAbout.bind(this)}
           scrollToGeologicTimeline={this.scrollToGeologicTimeline.bind(this)}
           scrollToFieldTripGuide={this.scrollToFieldTripGuide.bind(this)}
-          scrollToBibliography={this.scrollToBibliography.bind(this)}
+          scrollToResources={this.scrollToResources.bind(this)}
         />
         <header className="App-header">
           <Typography
@@ -172,18 +171,33 @@ class App extends Component {
         <section ref={this.fieldTripGuideRef}>
           <FieldTrip />
         </section>
-        <section ref={this.bibliographyRef}>
+        <section ref={this.resourcesRef}>
           <Typography variant="h4" align="center" gutterBottom>
-            Bibliography
+            Additional Resources
           </Typography>
           <a
             className="App-link"
             target="_blank"
             rel="noopener noreferrer"
-            href={denaliAnnotatedBibliography}
-            download="Denali Annotated Bibliography"
+            href="https://www.nps.gov/dena/index.htm"
           >
-            Download Annotated Bibliography
+            National Parks Service Denali site
+          </a>
+          <a
+            className="App-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.nps.gov/dena/learn/photosmultimedia/webcams.htm"
+          >
+            Live Denali webcams
+          </a>
+          <a
+            className="App-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.nps.gov/dena/planyourvisit/index.htm"
+          >
+            Plan your visit
           </a>
         </section>
         <section>
