@@ -72,10 +72,10 @@ class Nav extends Component {
           <ListItem
             button
             onClick={() => {
-              this.props.scrollToBibliography();
+              this.props.scrollToResources();
             }}
           >
-            <ListItemText primary="Bibliography" />
+            <ListItemText primary="Additional Resources" />
           </ListItem>
         </List>
       </div>
