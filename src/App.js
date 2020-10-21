@@ -124,18 +124,6 @@ class App extends Component {
               accretions
             </a>{" "}
             began suturing onto the North American Plate from the Pacific Plate.
-            Fast forward 200 million years, where the Earth was undergoing a
-            mountain building event called the{" "}
-            <a
-              className="App-link"
-              href="https://en.wikipedia.org/wiki/Sevier_orogeny"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sevier
-            </a>{" "}
-            Orogeny. There was volcanic activity all around and a large magma
-            chamber began to form.
           </Typography>
           <Typography
             align="justify"
@@ -148,17 +136,7 @@ class App extends Component {
               fontSize: 15
             }}
           >
-            After the Sevier comes the{" "}
-            <a
-              className="App-link"
-              href="https://en.wikipedia.org/wiki/Laramide_orogeny"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Laramide
-            </a>{" "}
-            Orogeny where volcanic activity began to stop due to shallow plate
-            subduction. The giant magma chamber cooled during this time, which
+            Deep underneath the earth a massive magma chamber cooled, which
             formed a giant mass of granite referred to as a granitic{" "}
             <a
               className="App-link"
@@ -168,9 +146,7 @@ class App extends Component {
             >
               pluton
             </a>
-            . If you were to jump forward 30 million years into the future, you
-            would see Slab Rollback. The subducting plate had rolled back
-            westward and allowed for massive volcanic activity.
+            .
           </Typography>
           <Typography
             align="justify"
@@ -183,13 +159,11 @@ class App extends Component {
               fontSize: 15
             }}
           >
-            After rollback occurred there was then major uplift due to faulting.
-            This happened around 30 million years ago. During this phase, Denali
-            was raised high into the sky. The uplift of Denali allowed the
-            weaker sedimentary layers surrounding the now cooled magma chamber
-            to be exposed and erode. When enough of the outer layer eroded what
-            was left was the resistant granite that is Denali as we know it
-            today.
+            After the granitic pluton cooled, Denali was then uplifted. The
+            uplift of Denali allowed the weaker sedimentary layers surrounding
+            the now cooled magma chamber to be exposed and erode. When enough of
+            the outer layer eroded what was left was the resistant granite that
+            is Denali as we know it today.
           </Typography>
         </section>
         <section ref={this.geologicTimelineRef}>
@@ -212,9 +186,59 @@ class App extends Component {
             Download Annotated Bibliography
           </a>
         </section>
+        <section>
+          <Typography
+            align="justify"
+            gutterBottom
+            variant="body1"
+            style={{
+              maxWidth: 450,
+              margin: "0 auto",
+              lineHeight: 1.6,
+              fontSize: 13
+            }}
+          >
+            <i>
+              This website was made to fulfill the requirements of a school
+              geology project while I was attending Southern Utah University. I
+              will keep providing the hosting and continued development of this
+              application for free because Denali is awesome! Please contact me
+              if you would like to see revisions to any of this content. I am
+              also open to new ideas for adding additional information to make
+              this website more accurate and useful.
+            </i>
+          </Typography>
+        </section>
         <section style={{ marginBottom: 8 }}>
           <Typography align="center" gutterBottom>
-            &copy; Kasey Hinton {new Date().getFullYear()}
+            <a
+              className="App-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/kaseyhinton"
+              style={{ marginRight: 16 }}
+            >
+              &copy; Kasey Hinton {new Date().getFullYear()}
+            </a>
+            <a
+              className="App-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:kaseyjameshinton@gmail.com"
+              title="Get in touch with me and let me know what you think"
+              style={{ marginRight: 16 }}
+            >
+              Contact
+            </a>
+            <a
+              className="App-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/kaseyhinton/denali"
+              title="Propose changes to content or add additional information"
+            >
+              Contribute
+            </a>
           </Typography>
         </section>
       </div>
